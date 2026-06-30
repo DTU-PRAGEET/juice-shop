@@ -41,9 +41,9 @@ application:
     topProductImage: fruit_press.jpg
     bottomProductImage: apple_pressings.jpg
   welcomeBanner:
-    showOnFirstStart: true
-    title: 'Welcome to OWASP Juice Shop!'
-    message: "<p>Being a web application with a vast number of intended security vulnerabilities, the <strong>OWASP Juice Shop</strong> is supposed to be the opposite of a best practice or template application for web developers: It is an awareness, training, demonstration and exercise tool for security risks in modern web applications. The <strong>OWASP Juice Shop</strong> is an open-source project hosted by the non-profit <a href='https://owasp.org' target='_blank'>Open Worldwide Application Security Project (OWASP)</a> and is developed and maintained by volunteers. Check out the link below for more information and documentation on the project.</p><h1><a href='https://owasp-juice.shop' target='_blank'>https://owasp-juice.shop</a></h1>"
+    showOnFirstStart: false
+    title: 'Welcome!'
+    message: '<p>Welcome to the Juice Shop.</p>'
   cookieConsent:
     message: 'This website uses fruit cookies to ensure you get the juiciest tracking experience.'
     dismissText: 'Me want it!'
@@ -78,10 +78,10 @@ application:
       - { uri: 'http://penguin.termina.linux.test:3000', proxy: 'https://localchromeos.owasp-juice.shop' }
       - { uri: 'http://penguin.termina.linux.test:4200', proxy: 'https://localchromeos.owasp-juice.shop' }
 challenges:
-  showSolvedNotifications: true
-  showHints: true
-  showMitigations: true
-  codingChallengesEnabled: solved # Options: never  solved  always
+  showSolvedNotifications: false
+  showHints: false
+  showMitigations: false
+  codingChallengesEnabled: never # Options: never  solved  always
   restrictToTutorialsFirst: false
   overwriteUrlForProductTamperingChallenge: 'https://owasp.slack.com'
   overwriteUrlForCsrfChallenge: 'http://htmledit.squarefree.com'
@@ -94,7 +94,7 @@ challenges:
     - 'promscrape'
     - 'otelcol'
 hackingInstructor:
-  isEnabled: true
+  isEnabled: false
   avatarImage: JuicyBot.png
   hintPlaybackSpeed: normal # Options: faster fast normal slow slower
 products:
@@ -170,9 +170,6 @@ products:
     description: 'Contains a magical collection of the rarest fruits gathered from all around the world, like Cherymoya Annona cherimola, Jabuticaba Myrciaria cauliflora, Bael Aegle marmelos... and others, at an unbelievable price! <br/><span style="color:red;">This item has been made unavailable because of lack of safety standards.</span>'
     price: 16.99
     image: undefined.jpg
-    keywordsForPastebinDataLeakChallenge:
-      - hueteroneel
-      - eurogium edule
   -
     name: 'OWASP Juice Shop Sticker (2015/2016 design)'
     description: 'Die-cut sticker with the official 2015/2016 logo. By now this is a rare collectors item. <em>Out of stock!</em>'
@@ -259,9 +256,6 @@ products:
     description: 'This rare item was designed and handcrafted in Sweden. This is why it is so incredibly expensive despite its complete lack of purpose.'
     price: 99.99
     image: 3d_keychain.jpg # Exif metadata contains "OpenSCAD" as subtle hint...
-    fileForRetrieveBlueprintChallenge: JuiceShop.stl # ...to blueprint file type
-    exifForBlueprintChallenge:
-      - OpenSCAD
   -
     name: 'Juice Shop Artwork'
     description: 'Unique masterpiece painted with different kinds of juice on 90g/m² lined paper.'
@@ -489,13 +483,9 @@ memories:
   -
     image: 'favorite-hiking-place.png'
     caption: 'I love going hiking here...'
-    geoStalkingMetaSecurityQuestion: 14
-    geoStalkingMetaSecurityAnswer: 'Daniel Boone National Forest'
   -
     image: 'IMG_4253.jpg'
     caption: 'My old workplace...'
-    geoStalkingVisualSecurityQuestion: 10
-    geoStalkingVisualSecurityAnswer: 'ITsec'
   -
     image: 'BeeHaven.png'
     caption: 'Welcome to the Bee Haven (/#/bee-haven)🐝'
